@@ -1,6 +1,6 @@
 # blickTakt
 
-A visual metronome app inspired by the fact that the classic auditory metronome just did not work out for me. So, here is a visual metronome, that blinks (and tecs) if you need to press the key.
+A visual metronome app inspired by the fact that the classic auditory metronome just did not work out for me. So, here is a visual metronome, that blinks (and can also make tic-toc noises).
 
 ## Features
 

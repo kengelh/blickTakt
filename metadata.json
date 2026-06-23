@@ -1,0 +1,6 @@
+{
+  "name": "blickTakt",
+  "description": "A visual metronome designed for musicians who prefer a visual stimulus over auditory ticks. Features customizable time signatures, accent colors, and brightness controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

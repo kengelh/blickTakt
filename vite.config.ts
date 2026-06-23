@@ -1,0 +1,43 @@
+import path from 'path';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import { VitePWA } from 'vite-plugin-pwa';
+
+export default defineConfig(({ mode }) => {
+    return {
+      server: {
+        port: 3000,
+        host: '0.0.0.0',
+      },
+      plugins: [
+        react(),
+        tailwindcss(),
+        VitePWA({
+          registerType: 'autoUpdate',
+          includeAssets: ['icon.svg'],
+          manifest: {
+            name: 'blickTakt',
+            short_name: 'blickTakt',
+            description: 'A visual metronome for musicians.',
+            theme_color: '#020617',
+            background_color: '#020617',
+            display: 'standalone',
+            icons: [
+              {
+                src: 'icon.svg',
+                sizes: '192x192 512x512',
+                type: 'image/svg+xml',
+                purpose: 'any maskable'
+              }
+            ]
+          }
+        })
+      ],
+      resolve: {
+        alias: {
+          '@': path.resolve(__dirname, '.'),
+        }
+      }
+    };
+});
